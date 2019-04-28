@@ -10,10 +10,10 @@ export class RepositoryService  {
 
       constructor(private http: HttpClient) {}
 
-      getRepos() {
+      getRepos(page) {
         this.repositories = []; // empty the repositories each time the request is sent
         let last_30_days = this.formatDate(); // formatting the date to get yyyy-mm-dd format
-        this.http.get('https://api.github.com/search/repositories?q=created:>' + last_30_days + '&sort=stars&order=desc')
+        this.http.get('https://api.github.com/search/repositories?q=created:>' + last_30_days + '&sort=stars&order=desc&page=' + page)
         .subscribe((data : any) => {
           for(let repo of data.items){
             // pushing the repositories the the repositories[] array
