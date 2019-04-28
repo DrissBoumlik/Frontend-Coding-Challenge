@@ -1,6 +1,11 @@
 
 
-<div class="container">
+<div class="container"
+    infiniteScroll
+    [infiniteScrollDistance]="0"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()"
+>
   <label for="">Load starred Github repos that were created in the last 30 days.</label>
     <button class="btn btn-primary" (click)='onLoad()' [disabled]="!btn_load_active">Load </button>
   <hr>
