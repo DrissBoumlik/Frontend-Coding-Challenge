@@ -6,7 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 The [Angular Infinite Scroll](https://www.npmjs.com/package/ngx-infinite-scroll) to implement the infinit scrolling (loading more data while the user scrolls down)
 
 ## Download & SetUp
+* Open the command line
 * Run `git clone https://github.com/DrissBoumlik/Frontend-Coding-Challenge.git`
+* Run `cd Frontend-Coding-Challenge`
 * Run `npm install`
 
 ## Running
