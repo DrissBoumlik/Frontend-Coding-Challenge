@@ -2,7 +2,7 @@
 
 <div class="container">
   <label for="">Load starred Github repos that were created in the last 30 days.</label>
-    <button class="btn btn-primary" (click)='onLoad()'>Load </button>
+    <button class="btn btn-primary" (click)='onLoad()' [disabled]="!btn_load_active">Load </button>
   <hr>
   <app-repository-item *ngFor="let repository of repositories; let i = index"
   [repository]="repository"></app-repository-item>
