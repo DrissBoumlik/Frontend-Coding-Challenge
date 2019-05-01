@@ -35,9 +35,8 @@ export class RepositoryService  {
       let date = new Date();
       date = new Date(new Date(date.setDate(date.getDate() - 30)).toLocaleDateString().replace(/\//g,'-'));
       var year = date.getFullYear();
-      var _month = date.getMonth() + 1;
-      var month = _month < 10 ? '0' + _month : _month;
-      var day = date.getDate();
+      var month = ("0" + (date.getMonth() + 1)).slice(-2);
+      var day = ("0" + date.getDate()).slice(-2);
       var last_30_days = year + '-' + month + '-' + day;
       return last_30_days;
     }
