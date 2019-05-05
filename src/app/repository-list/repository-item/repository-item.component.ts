@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Repository } from 'src/app/Repository.model';
+import { Repository } from '../../repository.model';
 
 @Component({
   selector: 'app-repository-item',
@@ -8,9 +8,10 @@ import { Repository } from 'src/app/Repository.model';
 })
 export class RepositoryItemComponent implements OnInit {
   @Input() repository: Repository;
+  interval_time = '';
   constructor() { }
 
   ngOnInit() {
+    this.interval_time = parseInt(this.repository.submission_date) > 1 ? "days" : "day";
   }
-
 }

@@ -1,7 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Repository } from './Repository.model';
+import { Repository } from './repository.model';
 
 @Injectable()
 export class RepositoryService  {
