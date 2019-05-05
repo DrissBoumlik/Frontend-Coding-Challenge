@@ -1,14 +1,14 @@
 <div class="row">
-  <div class="col-md-3 col-sm-3 col-xs-3">
+  <div class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 col-xs-3 col-xs-offset-2">
     <img src="{{ repository.avatar }}" alt="">
   </div>
-  <div class="col-md-8 col-sm-8 col-xs-8">
+  <div class="col-md-5 col-sm-5 col-xs-5">
     <div class="row details"><h3>{{ repository.name }}</h3></div>
     <div class="row details">{{ repository.description }}</div>
     <div class="row details">
       <span class="data-number">Stars : {{ repository.stars }}</span>
       <span class="data-number">Issues : {{ repository.issues }}</span>
-      <span class="date">Submitted {{ repository.submission_date }} days ago by {{ repository.username }}</span>
+      <span class="date">Submitted {{ repository.submission_date }} {{ interval_time }} ago by {{ repository.username }}</span>
     </div>
   </div>
 </div>
