@@ -18,6 +18,10 @@ export class RepositoryListComponent implements OnInit {
     this.repositories = this.repositoryService.getRepos(1); // getting the repositories from the repos service
   }
   onScroll() {
+    if(this.page > 34) {
+      console.log('No data available');
+      return;
+    }
     this.repositories = this.repositoryService.getRepos(this.page++);
   }
 }
